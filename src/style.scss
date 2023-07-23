@@ -1,0 +1,772 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Rubik:wght@700&display=swap');
+
+$primaryRed:#AD0922;
+$primaryBlack:#1A1718;
+$secondary:#B2AFAA;
+$bodyLine: rgb(236, 236, 238);
+$body:rgb(249, 249, 251);
+$caution:rgb(249,208,214);
+
+html{
+    background: $body;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
+.app{
+    
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: $primaryBlack;
+
+    .link{
+        text-decoration: none;
+        color: inherit;
+    }
+  
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        // navbar of the page
+
+        .navbar{
+            flex: 1;
+            background: white;
+            border-bottom: 2px solid $bodyLine;
+
+            .container{
+                
+                width: 80%;
+                height: 100px ;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                
+                
+
+
+                .logo{
+                    flex: 1;
+                    height: 100%;
+                    padding: 10px;
+                    img{
+                        width: 200px;
+                        height: 75px;
+                       
+                    }
+                    border-right: 2px solid $bodyLine;
+                }
+                .search{
+                    flex:3;
+                    padding: 10px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-right: 2px solid $bodyLine;
+
+                    i{
+                        // flex: 1;
+                     font-size: 2rem;
+                     padding-right: 10px;
+                     color: $secondary;
+                    }
+                    input{
+                        flex: 2;
+                        border: none;
+                        font-size: 1.2rem;
+                        outline: none;
+                        
+                    }
+
+                    .topics{
+                        flex: 1;
+                        text-align: right;
+                        i{
+                            font-size: 1rem;
+                        }
+                    }
+                 }
+
+                 .user{
+                    padding: 20px;
+                    flex:2;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .latest{
+
+                        i{
+                            padding-left: 10px;
+                        }
+                    }
+                    .notify{
+                        position: relative;
+
+                        i{
+                            font-size: 1.25rem;
+                        }
+
+                        .total{
+                            position: absolute;
+                            top: -9px;
+                            left: -8px;
+                            background: red;
+                            color: white;
+                            opacity: 0.8;
+                            height: 18px;
+                            width: 18px;
+                            border-radius: 2px;
+                            font-size: 0.8rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                       
+                    }
+                    
+
+                    .details{
+                        display: flex;
+                        align-items: center;
+
+                        .nameLogo{
+                            margin: 5px;
+                            background: blue;
+                            color: white;
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .name{
+                            color: darkgray;
+                        }
+
+                        i{
+                            padding-left:10px ;
+                            color: $secondary;
+                        }
+                    }
+                 }
+
+            }
+
+           
+        }
+
+
+        // Footer of the page
+
+        .footer{
+            flex: 1;
+            background-color: white;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+            .container{
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                
+                
+               
+                .reach{
+                    display: flex;
+                    flex-direction: row;
+
+                    .footerLogo{
+                        padding: 10px;
+                        img{
+                            width: 200px;
+                            height: 75px;
+                           
+                        }
+    
+                    }
+    
+                }
+
+                .support{
+                    display: flex;
+                    justify-content: space-around;
+                    border-top: 2px solid $bodyLine;
+                    padding: 30px 0  ;
+                    .socials{
+                        display: flex;
+                        gap: 10px;
+                        color: darkslategray;
+                    }
+
+                }
+                
+                .links{
+                    display: flex;
+                    color: $secondary;
+                    gap: 10px;
+                    align-items: center;
+                }            
+    
+            }
+
+            
+        }
+
+
+
+        //home page 
+
+        .home{
+            flex: 5;
+
+            .container{
+                width: 80%;
+                
+                // display: flex;
+                // flex-direction: row;
+                // justify-content: space-around;
+                margin: auto;
+                
+
+                .filter{
+                    padding: 20px 0;
+                    width: 100%;
+                    display: flex;
+                    gap: 10px;
+                    border-bottom: 2px solid $bodyLine;
+
+                    .dropdown{
+                        background: #d3d3d3;
+                        display: flex;
+                        justify-content: center;
+                        gap: 5px;
+                        align-items: center;
+                        padding: 5px 10px;
+
+                        i{
+                            color: $secondary;
+                        }
+                    }
+
+                    
+
+                    .links{
+                        padding: 0 20px;
+                        display: flex;
+                        height: 100%;
+                        color: $secondary;
+                        gap: 20px;
+                        align-items: center;
+
+                        .link{
+                            position: relative;
+                         
+                        }
+
+                        .link:hover::after{
+                            content: "";
+                            position: absolute;
+                            bottom: -28.5px;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: orange;
+                        }
+                    }
+                   
+
+                }
+
+                .tableHead{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 10px 0;
+                    text-align: center;
+                    
+                    .topic{
+                        flex: 3;
+                        text-align: left;
+                        
+                    }
+                    .category{
+                        flex:1;
+                    }
+                    .users{
+                        flex:1;
+                    }
+                    .replies{
+                        flex:1;
+                    }
+                    .views{
+                        flex:1;
+                    }
+                    .activity{
+                        flex:1;
+                    }
+                }
+
+                .forumList{
+
+                    .forumbox{
+                        background: $caution;
+                        display: flex;
+                        text-align: center;
+                        align-items: center;
+                        box-sizing: content-box;
+
+                        .topic{
+                            flex: 3;
+                            text-align: left;
+                            padding: 20px;
+                            
+                            p{
+                                color: $secondary;
+                            }
+                        }
+                        .category{
+                            flex:1;
+                        }
+                        .users{
+                            flex:1;
+                            display: flex;
+                            justify-content: center;
+                            span{
+                                margin: 5px;
+                                background: blue;
+                                color: white;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                
+                            }
+
+                        }
+                        .replies{
+                            flex:1;
+                        }
+                        .views{
+                            flex:1;
+                            color: $secondary;
+                        }
+                        .activity{
+                            flex:1;
+                            color: $secondary;
+                        }
+
+                    }
+                }
+                
+            }
+        }
+
+        // Register page
+
+        .register{
+            
+            height: 100%;
+            
+
+            .nav{
+                width: 70%;
+                
+                margin: auto;
+                text-align: end;
+                margin-top: 50px;
+                button{
+                    width: 79px;
+                    height: 38px;
+                    border: none;
+                }
+            }
+            
+            .back{
+                
+                .img{
+                    position: relative;
+                    width: 60%;
+                    margin: auto;
+                    img{
+                        width: 100%;
+                    }
+
+                    .logo{
+                        position: absolute;
+                        top: 12%;
+                        left: 34%;
+                        img{
+                            box-sizing: content-box;
+                            height: 97px;
+                            width: 244px;
+                            padding-bottom:20px ;
+                            border-bottom: 1px solid $secondary  ;
+                        }
+                     }
+                    .info{
+                        position: absolute;
+                        width: 440px;
+                        top: 32%;
+                        left: 20%;
+
+                        h3{
+                            padding-bottom: 20px;
+                        }
+                        
+                        p{
+                            color: $secondary;
+                        }
+                        
+    
+                        
+                    }
+             
+                    
+                }
+            }
+            
+            
+            .container{
+                position: absolute;
+                top: 65%;
+                left: 20%;
+                width: 60%;
+                border-top:2px solid orange ;
+
+
+                button{
+                    width: 100%;
+                    height: 53px;
+                    background: #bb1d2d;
+                    text-align: center;
+                    border: none;
+                    color: white;
+                    margin: 30px 0;
+                    font-size: 17px;
+                }
+                
+                
+
+                .nav{
+                    text-align: right;
+                }
+
+                .regForm{
+                    // overflow: scroll;
+                    background: white;
+                    height: auto;
+                    padding: 50px;
+                    
+                    .userDetails{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        label{
+                            color: $secondary;
+                            
+                        }
+
+                        input{
+                            
+                            width: 100%;
+                            border: none;
+                            border-bottom: 1px solid $secondary;
+                            padding: 10px 0;
+                            outline: none;
+                            
+                        }
+                        
+    
+                        .name{
+                            display: flex;
+                            justify-content: space-around;
+                            gap: 30px;
+                            
+                            .fname{
+                                flex: 1;
+                            }
+                            .lname{
+                                flex:1;
+                            }
+    
+                            
+                        }
+                        
+                    }
+
+                    p.title{
+                        color: $secondary;
+                        padding: 20px 0;
+                    }
+
+                    .optional{
+                        padding: 20px 0;
+
+                        .setting{
+                            margin-top:100px ;
+                            position: relative;
+
+                            .privacy{
+                                
+                                display: flex;
+                                justify-content: space-around;
+                                gap: 20px;
+                               
+                                 
+                            }
+    
+                            .Social{
+                                display: flex;
+                                justify-content: space-around;
+                                gap: 20px;
+
+                                label{
+                                    img{
+                                        padding: 5px 4px 0 0;
+                                    }
+                                }
+                                
+                            }
+    
+
+                        }
+
+                        .radioBox{
+                            flex: 1;
+                            text-align: center;
+                            padding: 10px;
+                            
+                            border: 1px solid #e9ecee;
+
+                            label{
+                                position: relative;
+                               
+                                
+                                
+    
+                                &::before{
+                                    content:" ";
+                                    display: inline-block;
+                                    width: 16px;
+                                    height: 16px;
+                                    background: #d3d3d3;
+                                    padding-top:2px ;
+                                  
+                                    
+                                    position: absolute;
+                                    left: -40px;
+                                    bottom: 4px;
+                                }
+                                
+                            }
+    
+                            input[type="radio"] {
+                                display: none;
+                            }
+                             
+                            input[type="radio"]:checked  + label::before  {
+                            font-family: 'Font Awesome 5 Free';
+                            content: "\f00c";
+                            font-weight: 900;
+                            color: $primaryBlack;
+                            font-size: 13px;
+                            text-align: center;
+                            
+                              }
+                            
+                        }
+
+                        
+
+                        hr{
+                            // color: #e9ecee;
+                           border: 1px solid #e9ecee;
+                        }
+                        .header{
+                            margin:20px 0 ;
+                            width: 100%;
+                            height: 65px;
+                            // display: flex;
+                            // justify-content: space-between;
+                            // align-items: center;
+
+                           
+                            p{
+                                position: absolute;
+                                top: -10px;
+                                left: 35px;
+                                background: white;
+                                font-size: 14px;
+                                // font-weight: 700;
+                               
+                            }
+
+                            .image{
+                                position: absolute;
+                                height: 70px;
+                                width: 70px;
+                               
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                right: 25px;
+                                top:-35px
+                                
+                                
+                            }
+
+                        }
+
+                        
+                        .survey{
+                            position: relative;
+                            margin-top:100px ;
+                            
+                            .questions{ 
+                                
+                                
+                                form{
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    gap: 20px;
+    
+                                    div{
+                                        display: flex;
+                                        flex-direction: column;
+    
+                                        label{
+                                            padding-bottom:20px ;
+                                            color: $secondary;
+                                        }
+    
+                                        input ,select{
+                                            border: none;
+                                            border-bottom: 1px solid $secondary;
+                                            padding: 10px ;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .socialsConnect{
+                        position: relative;
+                        margin-top:100px ;
+
+                        .connection{
+                                
+                            form{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                gap: 20px;
+
+                                .socialNetwork{
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    label{
+                                        padding-bottom:20px ;
+                                        color: $secondary;
+
+                                        img{
+                                            padding: 5px 4px 0 0;
+                                        }
+                                    }
+
+                                    input {
+                                        border: none;
+                                        border-bottom: 1px solid $secondary;
+                                        padding: 10px ;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .category{
+                        margin-top: 100px;
+                        position: relative;
+                        
+                        
+                            
+
+                        .interest{
+                            padding: 30px 0 50px 0;
+                            form{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr 1fr;
+                                gap: 30px;
+                                
+                                label{
+                                    font-size: 14px;
+
+                                    &::before{
+                                        content:" ";
+                                        display: inline-block;
+                                        width: 16px;
+                                        height: 16px;
+                                        background: #d3d3d3;
+                                        padding-top:2px ;
+                                      
+                                        
+                                        position: absolute;
+                                        left: -25px;
+                                        bottom: 2px;
+                                    }
+                                }
+
+
+
+
+                            }
+                        }
+                    }
+
+                    .terms{
+                        
+                        form{
+                            margin-top: 50px;
+                            display: flex;
+                            
+                            .radioBox{
+                                border: none;
+                            }
+                        }
+                    }
+                   
+
+                   
+
+                }
+            }
+
+        }
+
+
+
+
+    }
+
+}
+
+
